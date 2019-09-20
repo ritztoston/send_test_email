@@ -1,0 +1,19 @@
+[0;1;32m●[0m gunicorn.service - gunicorn daemon
+   Loaded: loaded (/etc/systemd/system/gunicorn.service; disabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Fri 2019-09-20 13:24:31 UTC; 7s ago
+ Main PID: 10136 (gunicorn)
+    Tasks: 4 (limit: 1152)
+   CGroup: /system.slice/gunicorn.service
+           ├─10136 /home/ubuntu/myprojectdir/myprojectenv/bin/python3 /home/ubuntu/myprojectdir/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock myproject.wsgi:application
+           ├─10155 /home/ubuntu/myprojectdir/myprojectenv/bin/python3 /home/ubuntu/myprojectdir/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock myproject.wsgi:application
+           ├─10158 /home/ubuntu/myprojectdir/myprojectenv/bin/python3 /home/ubuntu/myprojectdir/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock myproject.wsgi:application
+           └─10159 /home/ubuntu/myprojectdir/myprojectenv/bin/python3 /home/ubuntu/myprojectdir/myprojectenv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock myproject.wsgi:application
+
+Sep 20 13:24:31 ip-172-31-54-138 systemd[1]: Started gunicorn daemon.
+Sep 20 13:24:32 ip-172-31-54-138 gunicorn[10136]: [2019-09-20 13:24:32 +0000] [10136] [INFO] Starting gunicorn 19.9.0
+Sep 20 13:24:32 ip-172-31-54-138 gunicorn[10136]: [2019-09-20 13:24:32 +0000] [10136] [INFO] Listening at: unix:/run/gunicorn.sock (10136)
+Sep 20 13:24:32 ip-172-31-54-138 gunicorn[10136]: [2019-09-20 13:24:32 +0000] [10136] [INFO] Using worker: sync
+Sep 20 13:24:32 ip-172-31-54-138 gunicorn[10136]: [2019-09-20 13:24:32 +0000] [10155] [INFO] Booting worker with pid: 10155
+Sep 20 13:24:32 ip-172-31-54-138 gunicorn[10136]: [2019-09-20 13:24:32 +0000] [10158] [INFO] Booting worker with pid: 10158
+Sep 20 13:24:32 ip-172-31-54-138 gunicorn[10136]: [2019-09-20 13:24:32 +0000] [10159] [INFO] Booting worker with pid: 10159
+Sep 20 13:24:32 ip-172-31-54-138 gunicorn[10136]:  - - [20/Sep/2019:13:24:32 +0000] "GET / HTTP/1.1" 200 16348 "-" "curl/7.58.0"
